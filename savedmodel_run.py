@@ -18,7 +18,7 @@ def my_loss_fn(y_true, y_pred):
     return loss
 
 loaded_model = keras.models.load_model(
-    "trained_model_temp.h5",
+    "trained_model.h5",
     custom_objects={'my_loss_fn': my_loss_fn}
 )
 
@@ -39,7 +39,7 @@ currentState = np.array(currentState)
 
 terminalState = False
 sumObtainedRewards = 0
-max_steps = 9999999999
+max_steps = 999
 steps = 0
 render_frequency = 1 
 
